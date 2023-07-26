@@ -41,7 +41,7 @@ function getComputerChoice() {
 
     // Psoible game results depending on player and computer selections
     if (computerSelection === playerSelection) {
-    resultado ='"Draw';
+    winner ='Draw';
     } else if (
     (computerSelection === 'rock' && playerSelection === 'scissors') ||
     (computerSelection === 'paper' && playerSelection === 'rock') ||
@@ -57,3 +57,10 @@ function getComputerChoice() {
 
 
 //this is the main code of the game
+
+//geting selections
+let optionAI = getComputerChoice();
+let playerOption = getUserChoice();
+
+//starting round
+console.log(playRound(optionAI, playerOption));
